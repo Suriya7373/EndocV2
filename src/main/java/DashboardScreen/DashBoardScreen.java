@@ -96,8 +96,7 @@ public class DashBoardScreen {
         Thread.sleep (20000);
         WebElement Pendingvisit = driver.findElement(xpath("(//*[@class=\"badge text-bg-danger\"])[1]"));
         Pendingvisit.click();
-        Pendingvisit.click();
-        Pendingvisit.click();
+
 
 
 
