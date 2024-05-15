@@ -44,7 +44,7 @@ import static org.openqa.selenium.By.*;
         Profile.click();
 
       //Clicking on Logout button
-       Thread.sleep (8000);
+       Thread.sleep (5000);
        WebElement Logout = driver.findElement(xpath("/html/body/div[2]/div[2]/div/div/div/button[2]"));
        Thread.sleep (3000);
        Logout.click();

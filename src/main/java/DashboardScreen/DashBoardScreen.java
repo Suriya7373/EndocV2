@@ -54,48 +54,70 @@ public class DashBoardScreen {
         //Filtering  Week  appointment
         WebElement Filterweek = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
         Filterweek.click();
-        Thread.sleep (10000);
+        Thread.sleep (5000);
         WebElement Week = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[2]"));
         Week.click();
 
         //Filtering month appointment
         WebElement Filtermonth = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
         Filtermonth.click();
-        Thread.sleep (10000);
+        Thread.sleep (5000);
         WebElement month = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[3]"));
         month.click();
 
         //Fliering yea appointment
         WebElement Filteryear = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
         Filteryear.click();
-        Thread.sleep (10000);
+        Thread.sleep (5000);
         WebElement year = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[4]"));
         year.click();
 
         //Filtering custom range appointment
         WebElement customrange = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
         customrange.click();
-        Thread.sleep (10000);
+        Thread.sleep (5000);
         WebElement custom = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[5]"));
         custom.click();
 
         //Clicking on appointment calender
-        Thread.sleep (10000);
+        Thread.sleep (5000);
         WebElement calender = driver.findElement(xpath("(//*[@class=\"mat-focus-indicator mat-icon-button mat-button-base\"])[3]"));
         calender.click();
         //(//*[@class="mat-focus-indicator mat-icon-button mat-button-base"])[3]
 
 
-        //filtering patients appointment
-        Thread.sleep (10000);
-        WebElement patients = driver.findElement(xpath("(//*[@class=\"mat-form-field-label-wrapper ng-tns-c96-8\"])[1]"));
-        patients.click();
-        ////*[@class="mat-select-arrow ng-tns-c98-793"][1]
 
-        //Clking on pending visit
-        Thread.sleep (20000);
-        WebElement Pendingvisit = driver.findElement(xpath("(//*[@class=\"badge text-bg-danger\"])[1]"));
-        Pendingvisit.click();
+        //year of patinets
+//        Thread.sleep (5000);
+//        WebElement patinetyear = driver.findElement(xpath("//*[@id=\"mat-select-value-3\"]/span/span"));
+//        Thread.sleep (5000);
+//        patinetyear.click();
+
+        //Appointment module
+        Thread.sleep (8000);
+        WebElement Appointment= driver.findElement(xpath("//div[contains(text(),'Appointments')]"]" ));
+        Appointment.click();
+
+        //Appointment module  calender
+
+        Thread.sleep (5000);
+        WebElement Appointmentcalender= driver.findElement(xpath("//*[@id=\"dx-0a550cce-38b5-c365-8492-ec3b8f47861d\"][1]"));
+        Appointmentcalender.click();
+
+        //creat appointment
+
+        Thread.sleep (5000);
+        WebElement Areatappointment= driver.findElement(xpath("//*[@class=\"create-app ng-star-inserted\"][1]"));
+        Areatappointment.click();
+
+
+
+
+
+
+
+
+
 
 
 
