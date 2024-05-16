@@ -1,10 +1,14 @@
 package LoginAndRegisterScreen;//package LoginAndRegisterScreen;
 import DashboardScreen.DashBoardScreen;
+//import Menu.Appointment;
+import Menu.AppointmentModule;
 import org.checkerframework.checker.signature.qual.ClassGetName;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 import static java.awt.SystemColor.menu;
 import static org.openqa.selenium.By.*;
@@ -17,6 +21,7 @@ import static org.openqa.selenium.By.*;
    @Test
 
    public void Setup() throws InterruptedException {
+       driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
        driver.get("https://mobtest.endocpm.com/login");
       driver.manage().window().maximize();
 
@@ -26,36 +31,36 @@ import static org.openqa.selenium.By.*;
       enteringMailId.sendKeys("qasuriya@gmail.com");
 
        //Enter user password
-        Thread.sleep (5000);
+
        WebElement enteringPassword = driver.findElement(id("mat-input-1"));
        enteringPassword.sendKeys("Endoc@123");
 
       //Clicking on signup
 
        WebElement ClickingSignup = driver.findElement(xpath("//span[normalize-space()='Sign In']"));
-       Thread.sleep (5000);
        ClickingSignup.click();
-       Thread.sleep (5000);
+
 
        //Clicking the profile button
-        Thread.sleep (5000);
-        WebElement Profile = driver.findElement(xpath("//div[@class='nav-right d-flex align-items-center']//div//div[@class='mat-menu-trigger UserProfilecls']"));
-        Thread.sleep (5000);
-        Profile.click();
+//
+//        WebElement Profile = driver.findElement(xpath("//div[@class='nav-right d-flex align-items-center']//div//div[@class='mat-menu-trigger UserProfilecls']"));
+//        Profile.click();
+//
+//      //Clicking on Logout button
+//
+//       WebElement Logout = driver.findElement(xpath("/html/body/div[2]/div[2]/div/div/div/button[2]"));
+//       Logout.click();
 
-      //Clicking on Logout button
-       Thread.sleep (5000);
-       WebElement Logout = driver.findElement(xpath("/html/body/div[2]/div[2]/div/div/div/button[2]"));
-       Thread.sleep (3000);
-       Logout.click();
 
-//calling to dashborad page
+       //calling to dashborad page
 
-       Thread.sleep (5000);
-       driver.navigate().back();
+
+       //driver.navigate().back();
         DashBoardScreen Screen = new DashBoardScreen(driver);
-        Thread.sleep (5000);
+
         Screen.Screen ();
+       AppointmentModule Appointment= new AppointmentModule(driver);
+       Appointment.Appointment();
 
    }
 
