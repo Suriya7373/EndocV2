@@ -95,7 +95,7 @@ public class DashBoardScreen {
 
         //Appointment module
         Thread.sleep (8000);
-        WebElement Appointment= driver.findElement(xpath("//div[contains(text(),'Appointments')]"]" ));
+        WebElement Appointment= driver.findElement(xpath("//div[contains(text(),'Appointments')]"]"));
         Appointment.click();
 
         //Appointment module  calender
