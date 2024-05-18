@@ -23,10 +23,8 @@ public class AppointmentModule {
           //Appointment module
             WebElement  PatientAppointment = driver.findElement(xpath("//*[text()='Appointments']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
-            System.out.println("appointment1");
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
             PatientAppointment.click();
-            System.out.println("appointment2");
+
 
             //Appointment module  calender
 
@@ -98,7 +96,7 @@ public class AppointmentModule {
 
             //Choosing  Facility
 
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             WebElement Facility= driver.findElement(xpath("//span[@class='mat-option-text']"));
             Facility.click();
 
@@ -109,29 +107,30 @@ public class AppointmentModule {
 
             //Choosing physician
 
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             WebElement Facilityphysician= driver.findElement(xpath("//*[@class=\"mat-option-text\"]"));
             Facilityphysician.click();
 
             // //Choosing appointmentcalender
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             WebElement Appointmentcalender= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[2]"));
             Appointmentcalender.click();
 
             // //Choosing appointmenttoday date
-            Thread.sleep(5000);
-            WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
-            AppointmentToday.click();
+//            Thread.sleep(5000);
+//            WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 21, 2024\"]"));
+//            AppointmentToday.click();
 
             // //Choosing Appointmentcalender
+            Thread.sleep(5000);
+            WebElement  Appointmentdatepicker= driver.findElement(xpath("//*[@class=\"mat-select-arrow-wrapper ng-tns-c98-36\"]"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Appointmentdatepicker);
+            Appointmentdatepicker.click();
 
-            WebElement  Appointmentcalen= driver.findElement(xpath("//*[@id=\"mat-select-value-11"));
-            Appointmentcalen.click();
-
-            //Choosing Appointmentcalendertoday
-
-            WebElement  Appointmentcalendertoday= driver.findElement(xpath("//*[@class=\"mat-option-text"));
-            Appointmentcalendertoday.click();
+            //Choosing Appointmenttimeing
+            Thread.sleep(5000);
+            WebElement  Appointmenttimeing= driver.findElement(xpath("//span[normalize-space()='07:30:00 PM']"));
+            Appointmenttimeing.click();
 
 
 
