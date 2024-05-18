@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.TimeoutException;
 import java.time.Duration;
 import static org.openqa.selenium.By.xpath;
 public class AppointmentModule {
@@ -23,8 +24,8 @@ public class AppointmentModule {
 
             WebElement  PatientAppointment = driver.findElement(xpath("//div[text()='Appointments']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            wait.until(ExpectedConditions.elementToBeClickable(PatientAppointment));
+            //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            //wait.until(ExpectedConditions.elementToBeClickable(PatientAppointment));
             PatientAppointment.click();
 
             //Appointment module  calender
@@ -47,7 +48,7 @@ public class AppointmentModule {
             Creatappointment.click();
 
             //Endering firstname
-            Thread.sleep(8000);
+            Thread.sleep(3000);
             WebElement enteringFirstname = driver.findElement(id("mat-input-6"));
             enteringFirstname.sendKeys("Sg");
 //            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -59,7 +60,7 @@ public class AppointmentModule {
 //            Firstname.sendKeys("Suriya");
 
             //Endering Lastname
-            Thread.sleep(8000);
+            Thread.sleep(3000);
             WebElement EnteringLastname = driver.findElement(id("mat-input-8"));
             EnteringLastname.sendKeys("Suriya");
 
@@ -74,15 +75,22 @@ public class AppointmentModule {
             GenderMale.click();
 
             //Choosing DOB
-            Thread.sleep(8000);
-            WebElement DOB= driver.findElement(xpath("(//*[@class=\"(//*[@class=\"mat-button-focus-overlay\"])[3]"));
+
+            WebElement DOB= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[1]"));
+           ((JavascriptExecutor) driver).executeScript("arguments[0].click();", DOB);
             DOB.click();
+
 
             // //Choosing DOB today date
 
-//            WebElement DOBToday= driver.findElement(xpath("//*[@class=\"mat-calendar-body-cell-content mat-focus-indicator mat-calendar-body-today\"][1]"));
-//            DOBToday.click();
-            /////
+            WebElement DOBToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);" , DOBToday);
+            DOBToday.click();
+//            Thread.sleep(5000);
+//            WebElement Today= driver.findElement(xpath("(//span[@class=\"mat-button-wrapper\"])[3]"));
+//            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Today);
+//            Today.click();
+
 
 
 
