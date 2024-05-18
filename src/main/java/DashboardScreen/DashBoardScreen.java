@@ -25,45 +25,45 @@ public class DashBoardScreen {
         //Clicking on filter appointment button
 
            WebElement FilterToday = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-        FilterToday.click();
+           FilterToday.click();
 
-        WebElement Today = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[1]"));
-         Today.click();
+           WebElement Today = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[1]"));
+           Today.click();
 
         //Filtering  Week  appointment
 
-        WebElement Filterweek = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-        Filterweek.click();
-        WebElement Week = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[2]"));
-        Week.click();
+           WebElement Filterweek = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
+           Filterweek.click();
+           WebElement Week = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[2]"));
+           Week.click();
 
         //Filtering month appointment
 
            WebElement Filtermonth = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-        Filtermonth.click();
-        WebElement month = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[3]"));
-        month.click();
+           Filtermonth.click();
+           WebElement month = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[3]"));
+           month.click();
 
         //Fliering year appointment
 
            WebElement Filteryear = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-        Filteryear.click();
-        WebElement year = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[4]"));
-        year.click();
+           Filteryear.click();
+           WebElement year = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[4]"));
+           year.click();
 
         //Filtering custom range appointment
 
            WebElement customrange = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-        customrange.click();
+           customrange.click();
 
-        WebElement custom = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[5]"));
-        custom.click();
+           WebElement custom = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[5]"));
+           custom.click();
 
 
-     //Patient years
+       //Patient years
 
            WebElement patinetyear = driver.findElement(xpath("//*[@id=\"mat-select-value-3\"]/span/span"));
-        patinetyear.click();
+           patinetyear.click();
 
         //Side notification
 //        WebElement Notification = driver.findElement(xpath("//*[@class=\"notification-icon\"]"));

@@ -4,6 +4,7 @@ import DashboardScreen.DashBoardScreen;
 import Menu.AppointmentModule;
 import Menu.MypatientsModule;
 import Menu.PatienttrackingModule;
+import Pageobjectmodule.LoginpagePOM;
 import org.openqa.selenium.JavascriptExecutor;
 import org.checkerframework.checker.signature.qual.ClassGetName;
 import org.openqa.selenium.WebElement;
@@ -24,20 +25,41 @@ import static org.openqa.selenium.By.*;
        driver.get("https://mobtest.endocpm.com/login");
        driver.manage().window().maximize();
 
-      //Enter user mailid
+      //Enter username password and signup for POM
 
-      WebElement enteringMailId = driver.findElement(id("mat-input-0"));
-      enteringMailId.sendKeys("qasuriya@gmail.com");
+       LoginpagePOM loginpagePOM=new LoginpagePOM();
+       LoginpagePOM.username(driver).sendKeys("qasuriya@gmail.com");
+       LoginpagePOM.Password(driver).sendKeys("Endoc@123");
+       LoginpagePOM.Signin(driver).click();
 
-       //Enter user password
 
-       WebElement enteringPassword = driver.findElement(id("mat-input-1"));
-       enteringPassword.sendKeys("Endoc@123");
 
-      //Clicking on signup
 
-       WebElement ClickingSignup = driver.findElement(xpath("//span[normalize-space()='Sign In']"));
-       ClickingSignup.click();
+
+
+
+
+
+
+
+
+
+
+
+
+
+//      WebElement enteringMailId = driver.findElement(id("mat-input-0"));
+//      enteringMailId.sendKeys("qasuriya@gmail.com");
+//
+//       //Enter user password
+//
+//       WebElement enteringPassword = driver.findElement(id("mat-input-1"));
+//       enteringPassword.sendKeys("Endoc@123");
+//
+//      //Clicking on signup
+//
+//       WebElement ClickingSignup = driver.findElement(xpath("//span[normalize-space()='Sign In']"));
+//       ClickingSignup.click();
 
 
        //calling to dashborad page
