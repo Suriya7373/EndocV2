@@ -2,8 +2,6 @@ package Menu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 import java.time.Duration;
 import static org.openqa.selenium.By.id;
 import static org.openqa.selenium.By.xpath;
@@ -15,35 +13,35 @@ public class MypatientsModule {
         this.driver = driver;
     }
     public void Patients() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30000));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30000));
         //Clicking on Mypatients
-
+            Thread.sleep(5000);
             WebElement MypatientsModule = driver.findElement(xpath("//*[text()='My Patients']"));
             MypatientsModule.click();
 
             //clicking on Add patient
-            Thread.sleep(10000);
+            Thread.sleep(20000);
             WebElement Addpatient = driver.findElement(xpath("//*[text()='+ Add patient']"));
             Addpatient.click();
 
             //Endering first name
             Thread.sleep(5000);
-            WebElement Enderingfirstname = driver.findElement(xpath("//*[@class=\"mat-form-field-infix ng-tns-c96-35\"]"));
+            WebElement Enderingfirstname = driver.findElement(xpath("//input[@formcontrolname=\"firstName\"]"));
             Enderingfirstname.sendKeys("Rio");
 
             //Endering Last name
             Thread.sleep(2000);
-            WebElement EnderingLastname = driver.findElement(xpath("//*[@id=\"mat-select-21\"]"));
+            WebElement EnderingLastname = driver.findElement(xpath("//input[@formcontrolname=\"lastName\"]"));
             EnderingLastname.sendKeys("Ronald");
 
             //Choosing Gender
             Thread.sleep(2000);
-            WebElement ChoosingGender = driver.findElement(xpath("//*[@id=\"mat-select-value-7"));
+            WebElement ChoosingGender = driver.findElement(xpath("//*[@aria-labelledby=\"mat-select-value-7\"]"));
             ChoosingGender.click();
 
             //Choosing GenderMale
             Thread.sleep(2000);
-            WebElement GenderMale = driver.findElement(xpath("//*[text()='Male']"));
+            WebElement GenderMale = driver.findElement(xpath("//span[text()='Male']"));
             GenderMale.click();
 
             //Coosing DOB

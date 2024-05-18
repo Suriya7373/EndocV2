@@ -13,18 +13,14 @@ public class AppointmentModule {
         this.driver = driver;
     }
         public void Appointment() throws InterruptedException {
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 
-
-          //Appointment module
+        //Appointment module
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
             WebElement  PatientAppointment = driver.findElement(xpath("//*[text()='Appointments']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
-            //((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
             PatientAppointment.click();
 
-
             //Appointment module  calender
-
             WebElement calendar= driver.findElement(xpath("(//*[@class=\"dx-button-content\"])[2]"));
             calendar.click();
 
@@ -70,7 +66,7 @@ public class AppointmentModule {
 
             // //Choosing DOB today date
 
-            WebElement DOBToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
+            WebElement DOBToday= driver.findElement(xpath("//td[@aria-label=\"June 3, 2024\"]"));
             DOBToday.click();
 
             //Entering phonenumber
@@ -115,7 +111,7 @@ public class AppointmentModule {
 
           // //Choosing appointmenttoday date
            Thread.sleep(5000);
-          WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 28, 2024\"]"));
+          WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"June 15, 2024\"]"));
            AppointmentToday.click();
 
             // //Choosing Get schedule time
@@ -126,18 +122,21 @@ public class AppointmentModule {
 //            //Choosing Appointmentcalendertoday
             Thread.sleep(3000);
 //
-           WebElement  Appointmentcalendertoday= driver.findElement(id("mat-select-10-panel"));
+//
+            WebElement  Appointmentcalendertoday= driver.findElement(id("mat-select-10-panel"));
             Appointmentcalendertoday.click();
 
             //consultingType
 
-            Thread.sleep(3000);
-            WebElement  consultingType= driver.findElement(xpath("//mat-select[@aria-label=\"consulting type\"]"));
+            Thread.sleep(8000);
+            WebElement  consultingType= driver.findElement(xpath("//mat-select[@formcontrolname=\"consultingType\"]"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", consultingType);
             consultingType.click();
 
             //choosing  //consultingType
-            Thread.sleep(3000);
-            WebElement choosingconsultingType = driver.findElement(xpath("//*[text()='ClinicConsulting']"));
+            Thread.sleep(8000);
+            WebElement choosingconsultingType = driver.findElement(xpath("//span[text()='ClinicConsulting']"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", choosingconsultingType);
             choosingconsultingType.click();
 
             //save

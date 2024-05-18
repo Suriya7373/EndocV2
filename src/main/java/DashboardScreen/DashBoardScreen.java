@@ -1,17 +1,8 @@
 package DashboardScreen;
-import DashboardScreen.DashBoardScreen;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import javax.naming.Name;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import static org.openqa.selenium.By.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 public class DashBoardScreen {
 
     WebDriver driver;
