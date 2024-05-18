@@ -15,31 +15,34 @@ public class DashBoardScreen {
 
         //Clicking on filter appointment button
 
-           WebElement FilterToday = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
-           FilterToday.click();
 
-           WebElement Today = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[1]"));
-           Today.click();
+           WebElement Filter = driver.findElement(xpath("//*[@class=\"mat-select-min-line ng-tns-c151-28 ng-star-inserted\"]"));
+           Filter.click();
+
+           //Filtertoday
+
+           WebElement Filtertoday = driver.findElement(xpath("(//*[text()=\"Today\"])[1]"));
+           Filtertoday.click();
 
         //Filtering  Week  appointment
 
-           WebElement Filterweek = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
+           WebElement Filterweek = driver.findElement(xpath("//*[@class=\"mat-select-min-line ng-tns-c151-28 ng-star-inserted\"]"));
            Filterweek.click();
-           WebElement Week = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[2]"));
+           WebElement Week = driver.findElement(xpath("(//*[text()=\"Week\"])[1]"));
            Week.click();
 
         //Filtering month appointment
 
-           WebElement Filtermonth = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
+           WebElement Filtermonth = driver.findElement(xpath("//*[@class=\"mat-select-min-line ng-tns-c151-28 ng-star-inserted\"]"));
            Filtermonth.click();
-           WebElement month = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[3]"));
+           WebElement month = driver.findElement(xpath("(//*[text()=\"Month\"])[1]"));
            month.click();
 
         //Fliering year appointment
 
-           WebElement Filteryear = driver.findElement(xpath("//*[@class=\"mat-select-arrow ng-tns-c98-7\"]"));
+           WebElement Filteryear = driver.findElement(xpath("//*[@class=\"mat-select-min-line ng-tns-c151-28 ng-star-inserted\"]"));
            Filteryear.click();
-           WebElement year = driver.findElement(xpath("(//*[@class=\"mat-option-text\"])[4]"));
+           WebElement year = driver.findElement(xpath("(//*[text()=\"Year \"])[1]"));
            year.click();
 
         //Filtering custom range appointment
