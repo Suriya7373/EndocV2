@@ -36,7 +36,6 @@ import static org.openqa.selenium.By.*;
       //Clicking on signup
 
        WebElement ClickingSignup = driver.findElement(xpath("//span[normalize-space()='Sign In']"));
-       ((JavascriptExecutor) driver).executeScript("arguments[0].click();", ClickingSignup);
        ClickingSignup.click();
 
 

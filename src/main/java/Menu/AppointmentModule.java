@@ -17,16 +17,16 @@ public class AppointmentModule {
         this.driver = driver;
     }
         public void Appointment() throws InterruptedException {
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 
 
           //Appointment module
-
-            WebElement  PatientAppointment = driver.findElement(xpath("//div[text()='Appointments']"));
+            WebElement  PatientAppointment = driver.findElement(xpath("//*[text()='Appointments']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
-            //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            //wait.until(ExpectedConditions.elementToBeClickable(PatientAppointment));
+            System.out.println("appointment1");
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
             PatientAppointment.click();
+            System.out.println("appointment2");
 
             //Appointment module  calender
 
@@ -51,15 +51,9 @@ public class AppointmentModule {
             Thread.sleep(3000);
             WebElement enteringFirstname = driver.findElement(id("mat-input-6"));
             enteringFirstname.sendKeys("Sg");
-//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//            wait.until(ExpectedConditions.elementToBeClickable(firstname));
-
-
-
-//            WebElement Firstname= driver.findElement(id("mat-input-5"));
-//            Firstname.sendKeys("Suriya");
 
             //Endering Lastname
+
             Thread.sleep(3000);
             WebElement EnteringLastname = driver.findElement(id("mat-input-8"));
             EnteringLastname.sendKeys("Suriya");
@@ -77,19 +71,67 @@ public class AppointmentModule {
             //Choosing DOB
 
             WebElement DOB= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[1]"));
-           ((JavascriptExecutor) driver).executeScript("arguments[0].click();", DOB);
             DOB.click();
-
 
             // //Choosing DOB today date
 
             WebElement DOBToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);" , DOBToday);
             DOBToday.click();
-//            Thread.sleep(5000);
-//            WebElement Today= driver.findElement(xpath("(//span[@class=\"mat-button-wrapper\"])[3]"));
-//            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Today);
-//            Today.click();
+
+            //Entering phonenumber
+
+            Thread.sleep(3000);
+            WebElement phonenumber = driver.findElement(xpath("//*[@id=\"mat-input-10\"]"));
+            phonenumber.sendKeys("7373871966");
+
+            //Entering e-mail
+
+            Thread.sleep(3000);
+            WebElement email = driver.findElement(xpath("//*[@id=\"mat-input-11\"]"));
+            email.sendKeys("sgsuriya001@gmail.com");
+
+            //Choosing  Facility dropdown
+
+            Thread.sleep(3000);
+            WebElement Facilitydropdown= driver.findElement(xpath("//*[@id=\"mat-select-value-7\"]"));
+            Facilitydropdown.click();
+
+            //Choosing  Facility
+
+            Thread.sleep(5000);
+            WebElement Facility= driver.findElement(xpath("//span[@class='mat-option-text']"));
+            Facility.click();
+
+            //Choosing physician
+            Thread.sleep(3000);
+            WebElement physiciandropdown= driver.findElement(xpath("//*[@id=\"mat-select-value-9\"]"));
+            physiciandropdown.click();
+
+            //Choosing physician
+
+            Thread.sleep(5000);
+            WebElement Facilityphysician= driver.findElement(xpath("//*[@class=\"mat-option-text\"]"));
+            Facilityphysician.click();
+
+            // //Choosing appointmentcalender
+            Thread.sleep(5000);
+            WebElement Appointmentcalender= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[2]"));
+            Appointmentcalender.click();
+
+            // //Choosing appointmenttoday date
+            Thread.sleep(5000);
+            WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
+            AppointmentToday.click();
+
+            // //Choosing Appointmentcalender
+
+            WebElement  Appointmentcalen= driver.findElement(xpath("//*[@id=\"mat-select-value-11"));
+            Appointmentcalen.click();
+
+            //Choosing Appointmentcalendertoday
+
+            WebElement  Appointmentcalendertoday= driver.findElement(xpath("//*[@class=\"mat-option-text"));
+            Appointmentcalendertoday.click();
 
 
 
@@ -103,5 +145,19 @@ public class AppointmentModule {
 
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
 }
