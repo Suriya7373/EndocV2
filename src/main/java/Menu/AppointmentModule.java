@@ -19,10 +19,9 @@ public class AppointmentModule {
           //Appointment module
             WebElement  PatientAppointment = driver.findElement(xpath("//*[text()='Appointments']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
-            System.out.println("appointment1");
             //((JavascriptExecutor) driver).executeScript("arguments[0].click();", PatientAppointment);
             PatientAppointment.click();
-            System.out.println("appointment2");
+
 
             //Appointment module  calender
 

@@ -2,6 +2,7 @@ package LoginAndRegisterScreen;//package LoginAndRegisterScreen;
 import DashboardScreen.DashBoardScreen;
 //import Menu.Appointment;
 import Menu.AppointmentModule;
+import Menu.MypatientsModule;
 import Menu.PatienttrackingModule;
 import org.openqa.selenium.JavascriptExecutor;
 import org.checkerframework.checker.signature.qual.ClassGetName;
@@ -53,6 +54,10 @@ import static org.openqa.selenium.By.*;
 
        PatienttrackingModule Patienttracking= new PatienttrackingModule(driver);
        Patienttracking.Patienttracking();
+
+       //calling to MypatientsModule
+       MypatientsModule Patients= new MypatientsModule(driver);
+       Patients.Patients();
 
    }
 

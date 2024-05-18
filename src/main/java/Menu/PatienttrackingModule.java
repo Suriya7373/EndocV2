@@ -15,13 +15,19 @@ public class PatienttrackingModule {
 
         this.driver = driver;
     }
-    public void Patienttracking(){
+    public void Patienttracking() throws InterruptedException {
         WebElement Patienttracking = driver.findElement(xpath("//*[text()='Patient tracking']"));
         Patienttracking.click();
 
         //clicking on calender
-        WebElement calender = driver.findElement(xpath("//button[@aria-label=\"Open calendar\"]"));
+        Thread.sleep(5000);
+        WebElement calender = driver.findElement(xpath("//*[name()='path' and contains(@d,'M19 3h-1V1')]"));
         calender.click();
+
+        //clicking on calender today
+        WebElement calendertoday = driver.findElement(xpath("//*[@class=\"mat-calendar-body-cell-content mat-focus-indicator mat-calendar-body-selected mat-calendar-body-today\"]"));
+        calendertoday.click();
+
 
     }
 }
