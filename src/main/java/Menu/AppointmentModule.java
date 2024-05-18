@@ -87,46 +87,63 @@ public class AppointmentModule {
 
             //Choosing  Facility dropdown
 
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             WebElement Facilitydropdown= driver.findElement(xpath("//*[@id=\"mat-select-value-7\"]"));
             Facilitydropdown.click();
 
             //Choosing  Facility
 
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             WebElement Facility= driver.findElement(xpath("//span[@class='mat-option-text']"));
             Facility.click();
 
             //Choosing physician
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             WebElement physiciandropdown= driver.findElement(xpath("//*[@id=\"mat-select-value-9\"]"));
             physiciandropdown.click();
 
             //Choosing physician
 
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             WebElement Facilityphysician= driver.findElement(xpath("//*[@class=\"mat-option-text\"]"));
             Facilityphysician.click();
 
-//            // //Choosing appointmentcalender
-//            Thread.sleep(8000);
-//            WebElement Appointmentcalender= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[2]"));
-//            Appointmentcalender.click();
-//
-//            // //Choosing appointmenttoday date
-//            Thread.sleep(5000);
-//            WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 20, 2024\"]"));
-//            AppointmentToday.click();
+           // //Choosing appointmentcalender
+            Thread.sleep(5000);
+          WebElement Appointmentcalender= driver.findElement(xpath("(//button[@aria-label=\"Open calendar\"])[2]"));
+          Appointmentcalender.click();
 
-            // //Choosing Appointmentcalender
+          // //Choosing appointmenttoday date
+           Thread.sleep(5000);
+          WebElement  AppointmentToday= driver.findElement(xpath("//td[@aria-label=\"May 28, 2024\"]"));
+           AppointmentToday.click();
 
-//            WebElement  Appointmentcalen= driver.findElement(xpath("//*[@id=\"mat-select-value-11"));
-//            Appointmentcalen.click();
+            // //Choosing Get schedule time
+            Thread.sleep(3000);
+            WebElement  Appointmentcalen= driver.findElement(xpath("//mat-select[@aria-label=\"Get schedule time\"]"));
+          Appointmentcalen.click();
 //
 //            //Choosing Appointmentcalendertoday
+            Thread.sleep(3000);
 //
-//            WebElement  Appointmentcalendertoday= driver.findElement(xpath("//*[@class=\"mat-option-text"));
-//            Appointmentcalendertoday.click();
+           WebElement  Appointmentcalendertoday= driver.findElement(id("mat-select-10-panel"));
+            Appointmentcalendertoday.click();
+
+            //consultingType
+
+            Thread.sleep(3000);
+            WebElement  consultingType= driver.findElement(xpath("//mat-select[@aria-label=\"consulting type\"]"));
+            consultingType.click();
+
+            //choosing  //consultingType
+            Thread.sleep(3000);
+            WebElement choosingconsultingType = driver.findElement(xpath("//*[text()='ClinicConsulting']"));
+            choosingconsultingType.click();
+
+            //save
+            Thread.sleep(3000);
+            WebElement save = driver.findElement(xpath("//*[text()='Save']"));
+            save.click();
 
 
 

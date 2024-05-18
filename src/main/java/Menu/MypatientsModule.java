@@ -15,49 +15,49 @@ public class MypatientsModule {
         this.driver = driver;
     }
     public void Patients() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30000));
         //Clicking on Mypatients
 
             WebElement MypatientsModule = driver.findElement(xpath("//*[text()='My Patients']"));
             MypatientsModule.click();
 
             //clicking on Add patient
-            Thread.sleep(5000);
+            Thread.sleep(10000);
             WebElement Addpatient = driver.findElement(xpath("//*[text()='+ Add patient']"));
             Addpatient.click();
 
             //Endering first name
-            Thread.sleep(3000);
-            WebElement Enderingfirstname = driver.findElement(id("mat-input-4"));
+            Thread.sleep(5000);
+            WebElement Enderingfirstname = driver.findElement(xpath("//*[@class=\"mat-form-field-infix ng-tns-c96-35\"]"));
             Enderingfirstname.sendKeys("Rio");
 
             //Endering Last name
-            Thread.sleep(3000);
-            WebElement EnderingLastname = driver.findElement(id("mat-input-6"));
+            Thread.sleep(2000);
+            WebElement EnderingLastname = driver.findElement(xpath("//*[@id=\"mat-select-21\"]"));
             EnderingLastname.sendKeys("Ronald");
 
             //Choosing Gender
-            Thread.sleep(3000);
-            WebElement ChoosingGender = driver.findElement(id("mat-select-value-7"));
+            Thread.sleep(2000);
+            WebElement ChoosingGender = driver.findElement(xpath("//*[@id=\"mat-select-value-7"));
             ChoosingGender.click();
 
             //Choosing GenderMale
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             WebElement GenderMale = driver.findElement(xpath("//*[text()='Male']"));
             GenderMale.click();
 
             //Coosing DOB
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             WebElement DOB = driver.findElement(id("mat-input-9"));
             DOB.sendKeys("10/06/1999");
 
             //Entering mobilenumber
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             WebElement mobilenumber = driver.findElement(id("mat-input-11"));
             mobilenumber.sendKeys("7373871954");
 
             //Entering email
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             WebElement email = driver.findElement(id("mat-input-14"));
             email.sendKeys(("john@gmail.com"));
 
