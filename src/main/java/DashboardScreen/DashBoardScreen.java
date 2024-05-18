@@ -1,6 +1,7 @@
 package DashboardScreen;
 import DashboardScreen.DashBoardScreen;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -54,6 +55,18 @@ public class DashBoardScreen {
     //Patient years
         WebElement patinetyear = driver.findElement(xpath("//*[@id=\"mat-select-value-3\"]/span/span"));
         patinetyear.click();
+
+        //Side notification
+//        WebElement Notification = driver.findElement(xpath("//*[@class=\"notification-icon\"]"));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Notification);
+//        Notification.click();
+
+        //Side notification open encounter
+//        WebElement Encounter = driver.findElement(xpath("//span[normalize-space()='Open encounters']"));
+//        ((JavascriptExecutor) driver).executeScript("arguments[1].click();", Encounter);
+//        Encounter.click();
+
+
 
 
 

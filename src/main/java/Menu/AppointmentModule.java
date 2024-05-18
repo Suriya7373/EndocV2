@@ -15,7 +15,7 @@ public class AppointmentModule {
 
         this.driver = driver;
     }
-        public void Appointment() throws InterruptedException {
+        public void Appointment()  {
         driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(10));
 
         //Appointment module
@@ -23,16 +23,24 @@ public class AppointmentModule {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Appointment);
         Appointment.click();
 
-
         //Appointment module  calender
 
-           WebElement Appointmentcalender= driver.findElement(xpath("(//*[@class=\"dx-button-content\"])[2]"));
-           Appointmentcalender.click();
-//
-//       //creat appointment
-//
-//        WebElement Areatappointment= driver.findElement(xpath("//*[@class=\"create-app ng-star-inserted\"][1]"));
-//       Areatappointment.click();
+           WebElement calendar= driver.findElement(xpath("(//*[@class=\"dx-button-content\"])[2]"));
+           calendar.click();
+
+           //filter week
+            WebElement Week= driver.findElement(xpath("(//*[@class=\"dx-button-text\"])[3]"));
+            Week.click();
+
+            //filter month
+            WebElement Month= driver.findElement(xpath("(//*[@class=\"dx-button-text\"])[4]"));
+            Month.click();
+
+            //Creat appointment
+
+            WebElement Creatappointment= driver.findElement(xpath("//*[@class=\"create-app ng-star-inserted\"][1]"));
+            Creatappointment.click();
+
 
     }
 }

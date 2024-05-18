@@ -41,24 +41,15 @@ import static org.openqa.selenium.By.*;
        ClickingSignup.click();
 
 
-       //Clicking the profile button
-//
-//        WebElement Profile = driver.findElement(xpath("//div[@class='nav-right d-flex align-items-center']//div//div[@class='mat-menu-trigger UserProfilecls']"));
-//        Profile.click();
-//
-//      //Clicking on Logout button
-//
-//       WebElement Logout = driver.findElement(xpath("/html/body/div[2]/div[2]/div/div/div/button[2]"));
-//       Logout.click();
+
 
 
        //calling to dashborad page
 
-
-       //driver.navigate().back();
-        DashBoardScreen Screen = new DashBoardScreen(driver);
+       DashBoardScreen Screen = new DashBoardScreen(driver);
 
         Screen.Screen ();
+       //calling to Appointment page
        AppointmentModule Appointment= new AppointmentModule(driver);
        Appointment.Appointment();
 
